@@ -1,0 +1,39 @@
+{
+  "name": "action-slack-notify",
+  "version": "1.0.0",
+  "description": "Github Action to send templated notifications to slack",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egmacke/action-slack-notify.git"
+  },
+  "keywords": [
+    "action",
+    "slack"
+  ],
+  "author": "Edward Mackenzie",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/egmacke/action-slack-notify/issues"
+  },
+  "homepage": "https://github.com/egmacke/action-slack-notify#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@slack/web-api": "^6.4.0",
+    "slackify-markdown": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "@vercel/ncc": "^0.31.1",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}

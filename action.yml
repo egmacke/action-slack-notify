@@ -1,0 +1,18 @@
+name: Send notification to slack
+author: egmacke
+description: Send a notification to slack
+inputs:
+  slack-target:
+    description: ID of slack channel or user (accepts multiple values using a multiline string)
+    required: true
+  template:
+    description: A message template
+    required: false
+  content:
+    description: Either the formatted message to send, or the data to enrich the template from (when a template is provided)
+    required: true
+  
+runs:
+  using: node12
+  main: dist/index.js
+    
